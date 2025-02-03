@@ -2,9 +2,9 @@
 
 import * as React from 'react'
 
-import { SIDEBAR } from '@/app/constants'
 import { NavMain } from '@/components/nav-main'
 import { Sidebar, SidebarContent, SidebarRail } from '@/components/ui/sidebar'
+import { SIDEBAR } from '@/constants'
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
