@@ -20,7 +20,9 @@ const generateSplitInfo = (
     const imgPath =
       typeof iconType === 'string'
         ? PATHS.icons[iconType]
-        : PATHS.icons[`${iconType.type}${extraParams[key]}`]
+        : extraParams && key in extraParams
+        ? PATHS.icons[`${iconType.type}${extraParams[key]}`]
+        : PATHS.icons[iconType.type]
 
     acc[key] = {
       name,
