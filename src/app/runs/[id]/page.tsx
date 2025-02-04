@@ -1,17 +1,17 @@
 'use client'
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import AnimatedSplits from '@/components/animated-splits'
+import CombinatorialInfo from '@/components/combinatorial-info'
 import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
-import { Separator } from '@/components/ui/separator'
-import { INFO_SPLITS } from '@/constants'
-import { generateSplitsFile, getRandomizerSplits } from '@/functions'
+import { generateSplitsFile } from '@/functions/generate-splits-file'
+import { getRandomizerSplits } from '@/functions/randomizer-order'
 import { useParams } from 'next/navigation'
 import { useCallback, useState } from 'react'
 
 export default function Runs() {
   const { id } = useParams()
-  const [splits, setSplits] = useState<string[]>([])
+  const [splits, setSplits] = useState<SplitInfo[]>([])
   const [isGenerated, setIsGenerated] = useState(false)
 
   const handleDownload = useCallback(async () => {
@@ -26,38 +26,6 @@ export default function Runs() {
     }
   }, [id])
 
-  const animatedSplits = useCallback(
-    () =>
-      splits.map((split, index) => (
-        <div
-          key={`${split}-${index}`}
-          className="space-y-2 relative opacity-0"
-          style={{
-            animation: 'slide-and-fade-in 0.5s ease forwards',
-            animationDelay: `${index * 0.1}s`,
-          }}
-        >
-          <div className="text-sm  transition-colors p-2 rounded">
-            <div className="flex flex-row items-center">
-              <Avatar className="w-10 h-10 mx-4">
-                <AvatarImage
-                  src={INFO_SPLITS[split]?.img || ''}
-                  alt={INFO_SPLITS[split]?.name}
-                  className="object-contain"
-                />
-                <AvatarFallback className="text-2xl bg-muted">
-                  {split}
-                </AvatarFallback>
-              </Avatar>
-              {INFO_SPLITS[split]?.name.replace('&apos;', "'") || split}
-            </div>
-            {index < splits.length - 1 && <Separator className="mt-2" />}
-          </div>
-        </div>
-      )),
-    [splits]
-  )
-
   return (
     <div className="w-full h-full flex flex-col items-center transition-all duration-300">
       <h3 className="text-2xl text-center font-semibold w-full uppercase my-8">
@@ -67,21 +35,25 @@ export default function Runs() {
         <Button onClick={generateSplits} aria-live="polite">
           Generate
         </Button>
-        {isGenerated && <Button onClick={handleDownload}>Download</Button>}
+        {isGenerated && splits.length > 0 && (
+          <Button onClick={handleDownload}>Download</Button>
+        )}
       </div>
-      {isGenerated && (
-        <ScrollArea className="h-[80vh] w-full max-w-2xl rounded-md border bg-background/90 backdrop-blur-sm">
+      <ScrollArea className="h-auto max-h-[69vh] w-full max-w-2xl rounded-md border bg-background/90 backdrop-blur-sm">
+        {isGenerated ? (
           <div className="p-4 space-y-2">
             {splits.length > 0 ? (
-              animatedSplits()
+              <AnimatedSplits splits={splits} run={id as string} />
             ) : (
-              <div className="text-muted-foreground text-center py-8">
+              <div className="text-muted-foreground text-center text-red-600 py-8">
                 No splits generated
               </div>
             )}
           </div>
-        </ScrollArea>
-      )}
+        ) : (
+          <CombinatorialInfo run={id as string} />
+        )}
+      </ScrollArea>
     </div>
   )
 }

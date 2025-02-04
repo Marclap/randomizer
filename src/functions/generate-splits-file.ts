@@ -1,6 +1,4 @@
-import { CONFIG_RUN, ELEGY, INFO_SPLITS, LIVE_SPLIT_CONFIG } from '@/constants'
-
-const getRandomInt = (max: number) => Math.floor(Math.random() * max)
+import { CONFIG_RUN, LIVE_SPLIT_CONFIG } from '@/constants'
 
 const uint8ToBase64 = (bytes: Uint8Array): string =>
   btoa(bytes.reduce((acc, byte) => acc + String.fromCharCode(byte), ''))
@@ -44,9 +42,7 @@ async function processImageForLiveSplit(
   }
 }
 
-export async function createLiveSplitIconData(
-  imageUrl: string
-): Promise<string> {
+async function createLiveSplitIconData(imageUrl: string): Promise<string> {
   try {
     const imageData = await fetchImageData(imageUrl)
     return await processImageForLiveSplit(imageData)
@@ -56,10 +52,13 @@ export async function createLiveSplitIconData(
   }
 }
 
-export async function generateSplitsFile(splits: string[], category: string) {
+export async function generateSplitsFile(
+  splits: SplitInfo[],
+  category: string
+) {
   try {
     const segmentsPromises = splits.map(async (split) => {
-      const splitInfo = INFO_SPLITS[split]
+      const splitInfo = split
       if (!splitInfo) throw new Error(`Split info not found for: ${split}`)
 
       const icon = await createLiveSplitIconData(splitInfo.img)
@@ -77,7 +76,7 @@ export async function generateSplitsFile(splits: string[], category: string) {
 
     const segmentsContent = await Promise.all(segmentsPromises)
     const splitsContent = splits.map((split) => {
-      const splitData = INFO_SPLITS[split].split
+      const splitData = split.split
       return `<Split>${splitData}</Split>`
     })
 
@@ -119,7 +118,7 @@ export async function generateSplitsFile(splits: string[], category: string) {
 
     const link = document.createElement('a')
     link.href = url
-    link.download = `${category}.lss`
+    link.download = `${runConfig.category}.lss`
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -127,21 +126,5 @@ export async function generateSplitsFile(splits: string[], category: string) {
   } catch (error) {
     console.error('Error generating splits file:', error)
     throw error
-  }
-}
-
-export const getRandomizerSplits = (category: string) => {
-  switch (category) {
-    case 'elegy': {
-      const shuffled = [...ELEGY]
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = getRandomInt(i + 1)
-        ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
-      }
-      shuffled.push('GrubberflysElegy')
-      return shuffled
-    }
-    default:
-      return []
   }
 }
