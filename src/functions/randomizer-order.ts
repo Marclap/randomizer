@@ -1,6 +1,15 @@
 import { PATHS } from '@/constants'
-import { ELEGY, WORLDSOUL, ALL_STAG_STATIONS } from '@/constants/runs'
-import { SPLIT_DATA } from '@/constants/splits'
+import {
+  ALL_MASK_SHARDS,
+  ALL_STAG_STATIONS,
+  ELEGY,
+  WORLDSOUL,
+} from '@/constants/runs'
+import {
+  MASK_SHARD_RESTRICTIONS,
+  SPLIT_DATA,
+  WORLD_SOUL_RESTRICTIONS,
+} from '@/constants/splits'
 
 const getRandomInt = (max: number) => Math.floor(Math.random() * max)
 
@@ -50,6 +59,21 @@ const processSplits = (
   return shuffled.map((split) => data[split])
 }
 
+const getCorrectOrderWithRestrictions = (
+  shuffled: string[],
+  restrictions: string[]
+) => {
+  const restrictionsPositions = restrictions
+    .map((restriction) => shuffled.indexOf(restriction))
+    .filter((pos) => pos !== -1)
+  restrictionsPositions.sort((a, b) => a - b)
+  restrictions.forEach((restriction, index) => {
+    const currentPos = shuffled.indexOf(restriction)
+    const targetPos = restrictionsPositions[index]
+    if (currentPos !== targetPos) swap(shuffled, currentPos, targetPos)
+  })
+}
+
 export const getRandomizerSplits = (category: string) => {
   switch (category) {
     case 'elegy': {
@@ -58,9 +82,7 @@ export const getRandomizerSplits = (category: string) => {
     }
     case 'worldsoul': {
       const shuffled = shuffleArray(WORLDSOUL)
-      const sly1Pos = shuffled.indexOf('VesselFragSly1')
-      const sly2Pos = shuffled.indexOf('VesselFragSly2')
-      if (sly1Pos > sly2Pos) swap(shuffled, sly1Pos, sly2Pos)
+      getCorrectOrderWithRestrictions(shuffled, WORLD_SOUL_RESTRICTIONS)
       const vesselIndexes = shuffled.reduce((acc, split, index) => {
         acc[split] = index % 3
         return acc
@@ -70,6 +92,15 @@ export const getRandomizerSplits = (category: string) => {
     case 'allstagstations': {
       const shuffled = shuffleArray(ALL_STAG_STATIONS)
       return processSplits(shuffled, undefined, 'StagnestStation')
+    }
+    case 'allmaskshards': {
+      const shuffled = shuffleArray(ALL_MASK_SHARDS)
+      getCorrectOrderWithRestrictions(shuffled, MASK_SHARD_RESTRICTIONS)
+      const maskIndexes = shuffled.reduce((acc, split, index) => {
+        acc[split] = index % 4
+        return acc
+      }, {} as Record<string, number>)
+      return processSplits(shuffled, maskIndexes)
     }
     default:
       return []

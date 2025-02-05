@@ -17,15 +17,15 @@ export default function AnimatedSplits({ splits }: { splits: SplitInfo[] }) {
             <div className="flex flex-row items-center font-mono font-bold text-base">
               <Avatar className="w-10 h-10 mx-4 rounded-none">
                 <AvatarImage
-                  src={split?.img || ''}
-                  alt={split?.name}
+                  src={split.img}
+                  alt={split.name}
                   className="object-contain"
                 />
                 <AvatarFallback className="text-2xl bg-muted">
                   {split.name}
                 </AvatarFallback>
               </Avatar>
-              {split?.name}
+              {split.name}
             </div>
             {index < splits.length - 1 && <Separator className="mt-2" />}
           </div>
