@@ -100,7 +100,7 @@ export const RUN_DATA: CombinatorialComplexityConfig = {
         Comparable to the number of seconds in four days{' '}
         <span className="font-mono font-extrabold">(~345,600)</span>.
       </>,
-      'More than the number of pages in a long novel.',
+      'More than the number of words in a full-length novel.',
     ],
   },
 }
