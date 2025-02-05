@@ -216,4 +216,56 @@ export const SPLIT_DATA = [
     iconType: { type: 'vesselFrag' },
     split: 'OnObtainVesselFragment',
   },
+
+  // Stags
+  {
+    key: 'StoreroomsStation',
+    name: 'City Storerooms Stag',
+    iconType: 'stag',
+  },
+  {
+    key: 'KingsStationStation',
+    name: "King's Station Stag",
+    iconType: 'stag',
+  },
+  {
+    key: 'DeepnestStation',
+    name: 'Distant Village Stag',
+    iconType: 'stag',
+  },
+  {
+    key: 'CrossroadsStation',
+    name: 'Forgotten Crossroads Stag',
+    iconType: 'stag',
+  },
+  {
+    key: 'QueensStationStation',
+    name: "Queen's Station Stag",
+    iconType: 'stag',
+  },
+  {
+    key: 'GreenpathStation',
+    name: 'Greenpath Stag',
+    iconType: 'stag',
+  },
+  {
+    key: 'QueensGardensStation',
+    name: "Queen's Gardens Stag",
+    iconType: 'stag',
+  },
+  {
+    key: 'RestingGroundsStation',
+    name: 'Resting Grounds Stag',
+    iconType: 'stag',
+  },
+  {
+    key: 'HiddenStationStation',
+    name: 'Hidden Station Stag',
+    iconType: 'stag',
+  },
+  {
+    key: 'StagnestStation',
+    name: 'Stagnest Stag',
+    iconType: 'allStag',
+  },
 ]

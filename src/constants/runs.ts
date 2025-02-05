@@ -56,3 +56,15 @@ export const WORLDSOUL = [
   'VesselFragSly1',
   'VesselFragSly2',
 ]
+
+export const ALL_STAG_STATIONS = [
+  'StoreroomsStation',
+  'KingsStationStation',
+  'DeepnestStation',
+  'CrossroadsStation',
+  'QueensStationStation',
+  'GreenpathStation',
+  'QueensGardensStation',
+  'RestingGroundsStation',
+  'HiddenStationStation',
+]

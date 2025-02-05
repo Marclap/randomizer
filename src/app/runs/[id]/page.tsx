@@ -4,6 +4,7 @@ import AnimatedSplits from '@/components/animated-splits'
 import CombinatorialInfo from '@/components/combinatorial-info'
 import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
+import { TITLES } from '@/constants'
 import { generateSplitsFile } from '@/functions/generate-splits-file'
 import { getRandomizerSplits } from '@/functions/randomizer-order'
 import { useParams } from 'next/navigation'
@@ -29,7 +30,7 @@ export default function Runs() {
   return (
     <div className="w-full h-full flex flex-col items-center transition-all duration-300">
       <h3 className="text-2xl text-center font-semibold w-full uppercase my-8">
-        {id}
+        {TITLES[id as string]}
       </h3>
       <div className="flex gap-4 mb-8">
         <Button onClick={generateSplits} aria-live="polite">

@@ -6,7 +6,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
-import { LucideIcon } from 'lucide-react'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 
@@ -16,7 +15,7 @@ export function NavMain({
   items: {
     title: string
     url: string
-    icon: string | LucideIcon
+    icon: string
   }[]
 }) {
   const { id } = useParams()
@@ -24,9 +23,6 @@ export function NavMain({
   return (
     <SidebarMenu>
       {items.map((item) => {
-        const IconComponent = item.icon
-        const isStringIcon = typeof item.icon === 'string'
-
         return (
           <SidebarMenuItem key={item.title}>
             <SidebarMenuButton
@@ -36,23 +32,17 @@ export function NavMain({
               }`}
             >
               <Link href={item.url} className="flex items-center gap-3">
-                {isStringIcon ? (
-                  <Avatar className="w-8 h-8">
-                    <AvatarImage
-                      src={item.icon as string}
-                      alt={item.title}
-                      className="object-contain"
-                    />
-                    <AvatarFallback className="bg-transparent">
-                      {item.title[0]}
-                    </AvatarFallback>
-                  </Avatar>
-                ) : (
-                  <div className="w-8 h-8">
-                    <IconComponent className="object-contain" />
-                  </div>
-                )}
-                <span className="capitalize font-extrabold text-lg">
+                <Avatar className="w-8 h-8 rounded-none">
+                  <AvatarImage
+                    src={item.icon as string}
+                    alt={item.title}
+                    className="object-contain"
+                  />
+                  <AvatarFallback className="bg-transparent">
+                    {item.title[0]}
+                  </AvatarFallback>
+                </Avatar>
+                <span className="uppercase font-extrabold text-sm">
                   {item.title}
                 </span>
               </Link>

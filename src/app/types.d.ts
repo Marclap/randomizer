@@ -16,12 +16,12 @@ interface PathConfig {
   [key: string]: { [key: string]: string }
 }
 
-interface CombiantorialComplexityConfig {
+interface CombinatorialComplexityConfig {
   [key: string]: {
     title: string
     description: string
     formula: string
-    specialNote: string | React.ReactElement
+    specialNote?: string | React.ReactElement
     result: string | React.ReactElement
     comparisons: (string | React.ReactElement)[]
     additionalInfo?: React.ReactElement

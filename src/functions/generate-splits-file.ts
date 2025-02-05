@@ -1,7 +1,7 @@
 import { CONFIG_RUN, LIVE_SPLIT_CONFIG } from '@/constants'
 
 const uint8ToBase64 = (bytes: Uint8Array): string =>
-  btoa(bytes.reduce((acc, byte) => acc + String.fromCharCode(byte), ''))
+  btoa(String.fromCharCode(...bytes))
 
 async function fetchImageData(imageUrl: string): Promise<ArrayBuffer> {
   const response = await fetch(imageUrl)

@@ -1,11 +1,13 @@
 export const PATHS: PathConfig = {
   icons: {
+    allStag: '/assets/hollowKnight/icons/achievements/AllStagStations.png',
     elegy: '/assets/hollowKnight/icons/charms/GrubberflysElegy.png',
     grub: '/assets/hollowKnight/icons/misc/Grub.png',
+    home: '/assets/icon.png',
+    stag: '/assets/hollowKnight/icons/misc/Stag.png',
     vesselFrag0: '/assets/hollowKnight/icons/fragment/VesselFrag0.png',
     vesselFrag1: '/assets/hollowKnight/icons/fragment/VesselFrag1.png',
     vesselFrag2: '/assets/hollowKnight/icons/fragment/VesselFrag2.png',
-    home: '/assets/icon.png',
   },
   logos: {
     home: '/assets/hollowKnight/logos/home.png',
@@ -19,16 +21,28 @@ export const SIDEBAR = [
     icon: PATHS.icons.home,
   },
   {
-    title: 'elegy',
+    title: 'Elegy%',
     url: '/runs/elegy',
     icon: PATHS.icons.elegy,
   },
   {
-    title: 'worldsoul',
+    title: 'Worldsoul',
     url: '/runs/worldsoul',
     icon: PATHS.icons.vesselFrag2,
   },
+  {
+    title: 'All Stag Stations',
+    url: '/runs/allstagstations',
+    icon: PATHS.icons.allStag,
+  },
 ]
+
+export const TITLES: { [key: string]: string } = {
+  '': 'Home',
+  elegy: 'Elegy%',
+  worldsoul: 'Worldsoul',
+  allstagstations: 'All Stag Stations',
+}
 
 export const CONFIG_RUN: SplitConfig = {
   elegy: {
@@ -40,6 +54,11 @@ export const CONFIG_RUN: SplitConfig = {
     gameName: 'Hollow Knight Category Extensions',
     endTriggeringAutosplit: 'True',
     category: 'Worldsoul Random Fragment Order',
+  },
+  allstagstations: {
+    gameName: 'Hollow Knight Category Extensions',
+    endTriggeringAutosplit: 'True',
+    category: 'All Stag Stations Random Stag Order',
   },
 }
 

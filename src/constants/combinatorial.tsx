@@ -1,4 +1,4 @@
-export const RUN_DATA: CombiantorialComplexityConfig = {
+export const RUN_DATA: CombinatorialComplexityConfig = {
   elegy: {
     title: 'Combinatorial Complexity of Elegy%',
     description:
@@ -6,7 +6,7 @@ export const RUN_DATA: CombiantorialComplexityConfig = {
     formula: '44! = 44 x 43 x 42 x ... x 2 x 1',
     specialNote: (
       <p>
-        Note that, although{' '}
+        Note:{' '}
         <span className="font-mono font-extrabold">
           City Collector All Grubs
         </span>{' '}
@@ -81,6 +81,26 @@ export const RUN_DATA: CombiantorialComplexityConfig = {
         <span className="font-mono font-extrabold">(~172,800)</span>.
       </>,
       'Comparable to the number of words in a short novel.',
+    ],
+  },
+  allstagstations: {
+    title: 'Combinatorial Complexity of All Stag Stations',
+    description:
+      'When randomizing the order of visiting all Stag Stations, the number of possible unique permutations in which we can buy the stags is given by:',
+    formula: '9! = 9 x 8 x 7 x ... x 2 x 1',
+
+    additionalInfo: (
+      <>
+        <p className="text-lg">The total number of possible permutations is:</p>
+      </>
+    ),
+    result: '9! = 362,880',
+    comparisons: [
+      <>
+        Comparable to the number of seconds in four days{' '}
+        <span className="font-mono font-extrabold">(~345,600)</span>.
+      </>,
+      'More than the number of pages in a long novel.',
     ],
   },
 }
