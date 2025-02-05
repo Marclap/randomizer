@@ -7,6 +7,7 @@ import {
 } from '@/components/ui/breadcrumb'
 import { Separator } from '@/components/ui/separator'
 import { SidebarTrigger } from '@/components/ui/sidebar'
+import { TITLES } from '@/constants'
 import { usePathname } from 'next/navigation'
 
 const Header = () => {
@@ -21,7 +22,7 @@ const Header = () => {
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem className="hidden md:block uppercase font-black">
-                {params.split('/').slice(-1)}
+                {TITLES[params.split('/').slice(-1).toString()]}
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>

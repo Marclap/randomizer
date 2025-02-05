@@ -33,7 +33,7 @@ export default function Home() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex items-center">
-                    <Avatar className="w-32 h-32">
+                    <Avatar className="w-32 h-32 rounded-none">
                       <AvatarImage
                         src={item.icon as string}
                         alt={item.title}
