@@ -43,7 +43,7 @@ export default function Runs() {
         {isGenerated ? (
           <div className="p-4 space-y-2">
             {splits.length > 0 ? (
-              <AnimatedSplits splits={splits} run={id as string} />
+              <AnimatedSplits splits={splits} />
             ) : (
               <div className="text-muted-foreground text-center text-red-600 py-8">
                 No splits generated

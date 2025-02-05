@@ -36,10 +36,8 @@ const generateSplitInfo = (
 export const getRandomizerSplits = (category: string) => {
   const shuffleArray = (array: string[]) => {
     const shuffled = [...array]
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = getRandomInt(i + 1)
-      swap(shuffled, i, j)
-    }
+    for (let i = shuffled.length - 1; i > 0; i--)
+      swap(shuffled, i, getRandomInt(i + 1))
     return shuffled
   }
 
@@ -47,7 +45,7 @@ export const getRandomizerSplits = (category: string) => {
     case 'elegy': {
       const shuffled = shuffleArray(ELEGY)
       shuffled.push('GrubberflysElegy')
-      const data = generateSplitInfo(SPLIT_DATA, {})
+      const data = generateSplitInfo(SPLIT_DATA)
       return shuffled.map((split) => data[split])
     }
     case 'worldsoul':

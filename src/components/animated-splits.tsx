@@ -1,27 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Separator } from '@/components/ui/separator'
-import { useEffect, useState } from 'react'
 
-export default function AnimatedSplits({
-  splits,
-  run,
-}: {
-  splits: SplitInfo[]
-  run: string
-}) {
-  const [vesselIndexSplits, setVesselIndexSplits] = useState({})
-
-  useEffect(() => {
-    if (run === 'worldsoul') {
-      splits.map((split, index) => {
-        setVesselIndexSplits((prev) => ({ ...prev, [split.name]: index % 3 }))
-      })
-    }
-  }, [run, splits])
-
-  useEffect(() => {
-    console.log(vesselIndexSplits)
-  }, [vesselIndexSplits])
+export default function AnimatedSplits({ splits }: { splits: SplitInfo[] }) {
   return (
     <>
       {splits.map((split, index) => (
@@ -33,8 +13,8 @@ export default function AnimatedSplits({
             animationDelay: `${index * 0.1}s`,
           }}
         >
-          <div className="text-sm  transition-colors p-2 rounded">
-            <div className="flex flex-row items-center">
+          <div className="text-sm  transition-colors p-1 rounded">
+            <div className="flex flex-row items-center font-mono font-bold text-base">
               <Avatar className="w-10 h-10 mx-4">
                 <AvatarImage
                   src={split?.img || ''}

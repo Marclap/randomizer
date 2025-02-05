@@ -21,9 +21,9 @@ interface CombiantorialComplexityConfig {
     title: string
     description: string
     formula: string
-    specialNote: string
-    result: string
-    comparisons: string[]
+    specialNote: string | React.ReactElement
+    result: string | React.ReactElement
+    comparisons: (string | React.ReactElement)[]
     additionalInfo?: React.ReactElement
   }
 }

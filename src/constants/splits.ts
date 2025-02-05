@@ -101,7 +101,7 @@ export const SPLIT_DATA = [
     name: 'City Guard House Grub',
     iconType: 'grub',
   },
-  { key: 'GrubCitySpire', name: 'City Spire', iconType: 'grub' },
+  { key: 'GrubCitySpire', name: 'City Spire Grub', iconType: 'grub' },
   {
     key: 'GrubCrystalPeaksMimics',
     name: 'Crystal Peak Mimic Grub',
@@ -112,13 +112,13 @@ export const SPLIT_DATA = [
     name: 'Crossroads Vengefly Grub',
     iconType: 'grub',
   },
-  { key: 'GrubCrossroadsAcid', name: 'Crossroads Acid', iconType: 'grub' },
+  { key: 'GrubCrossroadsAcid', name: 'Crossroads Acid Grub', iconType: 'grub' },
   {
     key: 'GrubFogCanyonArchives',
     name: 'Fog Canyon Archives Grub',
     iconType: 'grub',
   },
-  { key: 'GrubDeepnestDark', name: 'Deepnest Dark', iconType: 'grub' },
+  { key: 'GrubDeepnestDark', name: 'Deepnest Dark Grub', iconType: 'grub' },
   {
     key: 'GrubDeepnestBeastsDen',
     name: "Deepnest Beast's Den Grub",
@@ -161,7 +161,7 @@ export const SPLIT_DATA = [
   },
   {
     key: 'GrubCityCollectorAll',
-    name: 'City Collector All Grub',
+    name: 'City Collector All Grubs',
     iconType: 'grub',
   },
 
