@@ -19,36 +19,34 @@ export default function Home() {
         <Separator className="bg-white mb-6" />
         <div className="flex flex-wrap items-center justify-center gap-2 pt-3">
           {itemsWithIcons.map((item) => (
-            <>
-              <Link
-                key={item.title}
-                href={item.url}
-                className="group block transition-transform hover:scale-105"
-                aria-label={`Navigate to ${item.title}`}
-              >
-                <Card className="h-full flex flex-col items-center justify-center p-6 transition-colors duration-300 group-hover:border-primary">
-                  <CardHeader className="pb-4">
-                    <CardTitle className="text-lg font-semibold uppercase tracking-wide">
+            <Link
+              key={item.title}
+              href={item.url}
+              className="group block transition-transform hover:scale-105"
+              aria-label={`Navigate to ${item.title}`}
+            >
+              <Card className="h-full flex flex-col items-center justify-center p-6 transition-colors duration-300 group-hover:border-primary">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-lg font-semibold uppercase tracking-wide">
+                    {item.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 flex items-center">
+                  <Avatar className="w-32 h-32 rounded-none">
+                    <AvatarImage
+                      src={item.icon as string}
+                      alt={item.title}
+                      width={128}
+                      height={128}
+                      className="object-contain p-2"
+                    />
+                    <AvatarFallback className="text-2xl bg-muted">
                       {item.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-1 flex items-center">
-                    <Avatar className="w-32 h-32 rounded-none">
-                      <AvatarImage
-                        src={item.icon as string}
-                        alt={item.title}
-                        width={128}
-                        height={128}
-                        className="object-contain p-2"
-                      />
-                      <AvatarFallback className="text-2xl bg-muted">
-                        {item.title}
-                      </AvatarFallback>
-                    </Avatar>
-                  </CardContent>
-                </Card>
-              </Link>
-            </>
+                    </AvatarFallback>
+                  </Avatar>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>

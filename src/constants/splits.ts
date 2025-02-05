@@ -268,4 +268,98 @@ export const SPLIT_DATA = [
     name: 'Stagnest Stag',
     iconType: 'allStag',
   },
+
+  // Mask Fragments
+  {
+    key: 'MaskShardMawlek',
+    name: 'Brooding Mawlek Mask Shard',
+    iconType: { type: 'maskShard' },
+  },
+  {
+    key: 'MaskShardGrubfather',
+    name: 'Grub Reward Mask Shard',
+    iconType: { type: 'maskShard' },
+  },
+  {
+    key: 'MaskShardGoam',
+    name: 'Goam Mask Shard',
+    iconType: { type: 'maskShard' },
+  },
+  {
+    key: 'MaskShardQueensStation',
+    name: "Queen's Station Mask Shard",
+    iconType: { type: 'maskShard' },
+  },
+  {
+    key: 'MaskShardBretta',
+    name: 'Bretta Mask Shard',
+    iconType: { type: 'maskShard' },
+  },
+  {
+    key: 'MaskShardStoneSanctuary',
+    name: 'Stone Sanctuary Mask Shard',
+    iconType: { type: 'maskShard' },
+  },
+  {
+    key: 'MaskShardWaterways',
+    name: 'Waterways Mask Shard',
+    iconType: { type: 'maskShard' },
+  },
+  {
+    key: 'MaskShardFungalCore',
+    name: 'Fungal Core Mask Shard',
+    iconType: { type: 'maskShard' },
+  },
+  {
+    key: 'MaskShardEnragedGuardian',
+    name: 'Enraged Guardian Mask Shard',
+    iconType: { type: 'maskShard' },
+  },
+  {
+    key: 'MaskShardHive',
+    name: 'Hive Mask Shard',
+    iconType: { type: 'maskShard' },
+  },
+  {
+    key: 'MaskShardSeer',
+    name: 'Seer Mask Shard',
+    iconType: { type: 'maskShard' },
+  },
+  {
+    key: 'MaskShardFlower',
+    name: 'Grey Mourner Mask Shard',
+    iconType: { type: 'maskShard' },
+  },
+  {
+    key: 'MaskShardSly1',
+    name: 'Sly Mask Shard 1',
+    iconType: { type: 'maskShard' },
+    split: 'OnObtainMaskShard',
+  },
+  {
+    key: 'MaskShardSly2',
+    name: 'Sly Mask Shard 2',
+    iconType: { type: 'maskShard' },
+    split: 'OnObtainMaskShard',
+  },
+  {
+    key: 'MaskShardSly3',
+    name: 'Sly Mask Shard 3',
+    iconType: { type: 'maskShard' },
+    split: 'OnObtainMaskShard',
+  },
+  {
+    key: 'MaskShardSly4',
+    name: 'Sly Mask Shard 4',
+    iconType: { type: 'maskShard' },
+    split: 'OnObtainMaskShard',
+  },
+]
+
+export const WORLD_SOUL_RESTRICTIONS = ['VesselFragSly1', 'VesselFragSly2']
+export const MASK_SHARD_RESTRICTIONS = [
+  'MaskShardSly1',
+  'MaskShardSly2',
+  'MaskShardSly3',
+  'MaskShardSly4',
 ]

@@ -22,29 +22,9 @@ export const RUN_DATA: CombinatorialComplexityConfig = {
     ),
     result: (
       <>
-        2.7 x 10<sup className="text-base">64</sup>
+        44! = 2.7 x 10<sup className="text-base">64</sup>
       </>
     ),
-    comparisons: [
-      <>
-        The estimated number of atoms in the observable universe{' '}
-        <span className="font-mono font-extrabold">
-          (~10<sup className="text-sm">80</sup>)
-        </span>
-      </>,
-      <>
-        The number of nanoseconds since the Big Bang{' '}
-        <span className="font-mono font-extrabold">
-          (~10<sup className="text-sm">26</sup>)
-        </span>
-      </>,
-      <>
-        The total number of possible chess positions{' '}
-        <span className="font-mono font-extrabold">
-          (~10<sup className="text-sm">47</sup>)
-        </span>
-      </>,
-    ],
   },
   worldsoul: {
     title: 'Combinatorial Complexity of Worldsoul',
@@ -75,18 +55,11 @@ export const RUN_DATA: CombinatorialComplexityConfig = {
       </>
     ),
     result: '9! / 2 = 181,440',
-    comparisons: [
-      <>
-        More than the number of seconds in two days{' '}
-        <span className="font-mono font-extrabold">(~172,800)</span>.
-      </>,
-      'Comparable to the number of words in a short novel.',
-    ],
   },
   allstagstations: {
     title: 'Combinatorial Complexity of All Stag Stations',
     description:
-      'When randomizing the order of visiting all Stag Stations, the number of possible unique permutations in which we can buy the stags is given by:',
+      'When randomizing the order of obtain all Stag Stations, the number of possible unique permutations is given by:',
     formula: '9! = 9 x 8 x 7 x ... x 2 x 1',
 
     additionalInfo: (
@@ -95,12 +68,51 @@ export const RUN_DATA: CombinatorialComplexityConfig = {
       </>
     ),
     result: '9! = 362,880',
-    comparisons: [
+  },
+  allmaskshards: {
+    title: 'Combinatorial Complexity of Mask Shards',
+    description:
+      'When randomizing the order of obtaining all 16 Mask Shards, the number of possible unique permutations is given by:',
+    formula: '16! = 16 x 15 x 14 x ... x 2 x 1',
+    specialNote: (
+      <p>
+        Note: The Mask Shards{' '}
+        <span className="font-mono font-extrabold">
+          Sly Mask Shard 1, Sly Mask Shard 2, Sly Mask Shard 3, and Sly Mask
+          Shard 4
+        </span>{' '}
+        have specific restrictions. They must appear in the exact order{' '}
+        <span className="font-mono font-extrabold">
+          Sly Mask Shard 1 → Sly Mask Shard 2 → Sly Mask Shard 3 → Sly Mask
+          Shard 4
+        </span>
+        , although they do not need to be consecutive. This restriction reduces
+        the total number of valid permutations.
+      </p>
+    ),
+    additionalInfo: (
       <>
-        Comparable to the number of seconds in four days{' '}
-        <span className="font-mono font-extrabold">(~345,600)</span>.
-      </>,
-      'More than the number of pages in a long novel.',
-    ],
+        <p className="text-lg">
+          Without restrictions, the total number of permutations would be:
+        </p>
+        <div className="flex items-center justify-center space-x-2 bg-secondary/60 p-4 rounded-md shadow-sm">
+          <code className="text-2xl font-mono text-white">
+            16! = 20,922,789,888,000
+          </code>
+        </div>
+        <p className="text-lg">
+          However, due to the restrictions on the order of the Sly Mask Shards,
+          only{' '}
+          <span className="font-mono font-extrabold">
+            1 out of every 24 permutations
+          </span>{' '}
+          is valid. This is because the 4 restricted Mask Shards can only appear
+          in one specific order, which reduces the total number of permutations
+          by a factor of{' '}
+          <span className="font-mono font-extrabold">4! = 24</span>.
+        </p>
+      </>
+    ),
+    result: '16! / 4! = 871,782,912,000',
   },
 }

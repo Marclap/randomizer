@@ -68,3 +68,22 @@ export const ALL_STAG_STATIONS = [
   'RestingGroundsStation',
   'HiddenStationStation',
 ]
+
+export const ALL_MASK_SHARDS = [
+  'MaskShardMawlek',
+  'MaskShardGrubfather',
+  'MaskShardGoam',
+  'MaskShardQueensStation',
+  'MaskShardBretta',
+  'MaskShardStoneSanctuary',
+  'MaskShardWaterways',
+  'MaskShardFungalCore',
+  'MaskShardEnragedGuardian',
+  'MaskShardHive',
+  'MaskShardSeer',
+  'MaskShardFlower',
+  'MaskShardSly1',
+  'MaskShardSly2',
+  'MaskShardSly3',
+  'MaskShardSly4',
+]
