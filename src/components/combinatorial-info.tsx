@@ -1,3 +1,5 @@
+'use client'
+
 import { RUN_DATA } from '@/constants/combinatorial'
 
 const CombinatorialInfo = ({ run }: { run: string }) => {

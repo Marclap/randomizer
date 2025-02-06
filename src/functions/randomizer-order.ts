@@ -65,13 +65,13 @@ const getCorrectOrderWithRestrictions = (
   restrictions: string[][]
 ) => {
   restrictions.forEach((restriction) => {
-    const restrictionsPositions = restriction
+    const restrictionPosition = restriction
       .map((res) => shuffled.indexOf(res))
       .filter((pos) => pos !== -1)
-    restrictionsPositions.sort((a, b) => a - b)
+    restrictionPosition.sort((a, b) => a - b)
     restriction.forEach((res, index) => {
       const currentPos = shuffled.indexOf(res)
-      const targetPos = restrictionsPositions[index]
+      const targetPos = restrictionPosition[index]
       if (currentPos !== targetPos) swap(shuffled, currentPos, targetPos)
     })
   })
