@@ -23,6 +23,6 @@ interface CombinatorialComplexityConfig {
     formula: string
     specialNote?: string | React.ReactElement
     result: string | React.ReactElement
-    additionalInfo?: React.ReactElement
+    additionalInfo?: string | React.ReactElement
   }
 }

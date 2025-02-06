@@ -8,7 +8,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'HK Random Split Order',
   description:
-    'This page generates random orders for some Hollow Knight speedrun categories, this is just for the purpose of changing the routine and making fun runs.',
+    'This page generates random orders for some categories of Hollow Knight speedrun, this is just for the purpose of changing the routine and making fun runs.',
 }
 
 export default function RootLayout({
@@ -39,7 +39,7 @@ export default function RootLayout({
                     <p>
                       Built by{' '}
                       <a
-                        href="https://github.com/Marclap"
+                        href="https://www.twitch.tv/marclap99"
                         target="_blank"
                         className="underline underline-offset-4"
                       >
