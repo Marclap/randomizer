@@ -76,12 +76,11 @@ export const RUN_DATA: CombinatorialComplexityConfig = {
     formula: '16! = 16 x 15 x 14 x ... x 2 x 1',
     specialNote: (
       <p>
-        Note: The Mask Shards{' '}
-        <span className="font-mono font-extrabold">
-          Sly Mask Shard 1, Sly Mask Shard 2, Sly Mask Shard 3, and Sly Mask
-          Shard 4
-        </span>{' '}
-        have specific restrictions. They must be obtained in the exact order{' '}
+        <span className="font-mono font-extrabold">Sly Mask Shard 1</span>,{' '}
+        <span className="font-mono font-extrabold">Sly Mask Shard 2</span>,{' '}
+        <span className="font-mono font-extrabold">Sly Mask Shard 3</span> and{' '}
+        <span className="font-mono font-extrabold">Sly Mask Shard 4</span> have
+        specific restrictions. They must be obtained in the exact order{' '}
         <span className="font-mono font-extrabold">
           Sly Mask Shard 1 → Sly Mask Shard 2 → Sly Mask Shard 3 → Sly Mask
           Shard 4
@@ -119,33 +118,38 @@ export const RUN_DATA: CombinatorialComplexityConfig = {
     title: 'Combinatorial Complexity of All Masks All Vessels',
     description:
       'When randomizing the order of obtaining All Masks All Vessels, the number of possible unique permutations is given by:',
-    formula: '24! = 24 x 23 x 22 x ... x 2 x 1',
+    formula: '25! = 25 x 24 x 23 x ... x 2 x 1',
     specialNote: (
       <>
-        However, there is some restriction:{' '}
-        <p className="mr-2">
-          - The vessels fragments{' '}
-          <span className="font-mono font-extrabold">
-            Sly Vessel Fragment 1 and Sly Vessel Fragment 2
-          </span>{' '}
-          have specific restrictions. They must be obtained in the exact order{' '}
-          <span className="font-mono font-extrabold">
-            Sly Vessel Fragment 1 → Sly Vessel Fragment 2
-          </span>
-          .
-        </p>
-        <p className="mt-2">
-          - The Mask Shards{' '}
-          <span className="font-mono font-extrabold">
-            Sly Mask Shard 1, Sly Mask Shard 2, Sly Mask Shard 3 and Sly Mask
-            Shard 4
-          </span>{' '}
-          have specific restrictions. They must be obtained in the exact order{' '}
-          <span className="font-mono font-extrabold">
-            Sly Mask Shard 1 → Sly Mask Shard 2 → Sly Mask Shard 3 → Sly Mask
-            Shard 4
-          </span>
-        </p>
+        However, there are some restrictions:{' '}
+        <ul style={{ listStyle: 'disc', listStylePosition: 'inside' }}>
+          <li>
+            <span className="font-mono font-extrabold">
+              Sly Vessel Fragment 1
+            </span>{' '}
+            and{' '}
+            <span className="font-mono font-extrabold">
+              Sly Vessel Fragment 2
+            </span>{' '}
+            must be obtained in the exact order{' '}
+            <span className="font-mono font-extrabold">
+              Sly Vessel Fragment 1 → Sly Vessel Fragment 2
+            </span>
+            .
+          </li>
+          <li>
+            <span className="font-mono font-extrabold">Sly Mask Shard 1</span>,{' '}
+            <span className="font-mono font-extrabold">Sly Mask Shard 2</span>,{' '}
+            <span className="font-mono font-extrabold">Sly Mask Shard 3</span>{' '}
+            and{' '}
+            <span className="font-mono font-extrabold">Sly Mask Shard 4</span>{' '}
+            must be obtained in the exact order{' '}
+            <span className="font-mono font-extrabold">
+              Sly Mask Shard 1 → Sly Mask Shard 2 → Sly Mask Shard 3 → Sly Mask
+              Shard 4
+            </span>
+          </li>
+        </ul>
         These restrictions reduce the total number of valid permutations.
       </>
     ),
@@ -156,8 +160,8 @@ export const RUN_DATA: CombinatorialComplexityConfig = {
         </p>
         <div className="flex items-center justify-center space-x-2 bg-secondary/60 p-4 rounded-md shadow-sm">
           <code className="text-2xl font-mono text-white">
-            24! = ~6.2 x 10
-            <sup className="text-sm">23</sup>
+            25! = ~1.55 x 10
+            <sup className="text-sm">25</sup>
           </code>
         </div>
         <div className="text-lg">
@@ -169,25 +173,29 @@ export const RUN_DATA: CombinatorialComplexityConfig = {
             </span>{' '}
             is valid. This is because:
           </p>
+          <ul style={{ listStyle: 'disc', listStylePosition: 'inside' }}>
+            <li>
+              The 2 restricted Vessel Fragments can only be obtained in one
+              specific order, which reduces the total by a factor of{' '}
+              <span className="font-mono font-extrabold">2</span>.
+            </li>
+            <li>
+              The 4 restricted Mask Shards can only be obtained in one specific
+              order, reducing the total by a factor of{' '}
+              <span className="font-mono font-extrabold">4! = 24</span>.
+            </li>
+          </ul>
           <p>
-            - The 2 restricted Vessel Fragments can only appear in one specific
-            order, reducing the total by a factor of{' '}
-            <span className="font-mono font-extrabold">2</span>.
+            Therefore, the total number of permutations is reduced by a combined
+            factor of{' '}
+            <span className="font-mono font-extrabold">2 x 4! = 48</span>.
           </p>
-          <p>
-            - The 4 restricted Mask Shards can only appear in one specific
-            order, reducing the total by a factor of{' '}
-            <span className="font-mono font-extrabold">4! = 24</span>.
-          </p>
-          Therefore, the total number of permutations is reduced by a combined
-          factor of{' '}
-          <span className="font-mono font-extrabold">2 x 4! = 48</span>.
         </div>
       </>
     ),
     result: (
       <>
-        24! / (2 x 4!) = ~1.29 x 10<sup className="text-sm">22</sup>
+        25! / (2 x 4!) = ~3.23 x 10<sup className="text-sm">23</sup>
       </>
     ),
   },
