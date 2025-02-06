@@ -41,19 +41,21 @@ export default function Runs() {
         )}
       </div>
       <ScrollArea className="h-auto max-h-[69vh] w-full max-w-2xl rounded-md border bg-background/90 backdrop-blur-sm">
-        {isGenerated ? (
-          <div className="p-4 space-y-2">
-            {splits.length > 0 ? (
-              <AnimatedSplits splits={splits} />
-            ) : (
-              <div className="text-muted-foreground text-center text-red-600 py-8">
-                No splits generated
-              </div>
-            )}
-          </div>
-        ) : (
-          <CombinatorialInfo run={id as string} />
-        )}
+        <div className="p-4 space-y-2">
+          {isGenerated ? (
+            <>
+              {splits.length > 0 ? (
+                <AnimatedSplits splits={splits} />
+              ) : (
+                <div className="text-muted-foreground text-center text-red-600 py-8">
+                  No splits generated
+                </div>
+              )}
+            </>
+          ) : (
+            <CombinatorialInfo run={id as string} />
+          )}
+        </div>
       </ScrollArea>
     </div>
   )

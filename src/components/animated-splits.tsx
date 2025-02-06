@@ -13,7 +13,7 @@ export default function AnimatedSplits({ splits }: { splits: SplitInfo[] }) {
             animationDelay: `${index * 0.1}s`,
           }}
         >
-          <div className="text-sm  transition-colors p-1 rounded">
+          <div className="text-sm transition-colors p-1 rounded">
             <div className="flex flex-row items-center font-mono font-bold text-base">
               <Avatar className="w-10 h-10 mx-4 rounded-none">
                 <AvatarImage

@@ -1,15 +1,16 @@
 import { PATHS } from '@/constants'
 import {
+  MASK_SHARD_RESTRICTIONS,
+  WORLD_SOUL_RESTRICTIONS,
+} from '@/constants/restrictions'
+import {
   ALL_MASK_SHARDS,
+  ALL_MASKS_ALL_VESSELS,
   ALL_STAG_STATIONS,
   ELEGY,
   WORLDSOUL,
 } from '@/constants/runs'
-import {
-  MASK_SHARD_RESTRICTIONS,
-  SPLIT_DATA,
-  WORLD_SOUL_RESTRICTIONS,
-} from '@/constants/splits'
+import { SPLIT_DATA } from '@/constants/splits'
 
 const getRandomInt = (max: number) => Math.floor(Math.random() * max)
 
@@ -61,16 +62,18 @@ const processSplits = (
 
 const getCorrectOrderWithRestrictions = (
   shuffled: string[],
-  restrictions: string[]
+  restrictions: string[][]
 ) => {
-  const restrictionsPositions = restrictions
-    .map((restriction) => shuffled.indexOf(restriction))
-    .filter((pos) => pos !== -1)
-  restrictionsPositions.sort((a, b) => a - b)
-  restrictions.forEach((restriction, index) => {
-    const currentPos = shuffled.indexOf(restriction)
-    const targetPos = restrictionsPositions[index]
-    if (currentPos !== targetPos) swap(shuffled, currentPos, targetPos)
+  restrictions.forEach((restriction) => {
+    const restrictionsPositions = restriction
+      .map((res) => shuffled.indexOf(res))
+      .filter((pos) => pos !== -1)
+    restrictionsPositions.sort((a, b) => a - b)
+    restriction.forEach((res, index) => {
+      const currentPos = shuffled.indexOf(res)
+      const targetPos = restrictionsPositions[index]
+      if (currentPos !== targetPos) swap(shuffled, currentPos, targetPos)
+    })
   })
 }
 
@@ -82,7 +85,7 @@ export const getRandomizerSplits = (category: string) => {
     }
     case 'worldsoul': {
       const shuffled = shuffleArray(WORLDSOUL)
-      getCorrectOrderWithRestrictions(shuffled, WORLD_SOUL_RESTRICTIONS)
+      getCorrectOrderWithRestrictions(shuffled, [WORLD_SOUL_RESTRICTIONS])
       const vesselIndexes = shuffled.reduce((acc, split, index) => {
         acc[split] = index % 3
         return acc
@@ -95,9 +98,29 @@ export const getRandomizerSplits = (category: string) => {
     }
     case 'allmaskshards': {
       const shuffled = shuffleArray(ALL_MASK_SHARDS)
-      getCorrectOrderWithRestrictions(shuffled, MASK_SHARD_RESTRICTIONS)
+      getCorrectOrderWithRestrictions(shuffled, [MASK_SHARD_RESTRICTIONS])
       const maskIndexes = shuffled.reduce((acc, split, index) => {
         acc[split] = index % 4
+        return acc
+      }, {} as Record<string, number>)
+      return processSplits(shuffled, maskIndexes)
+    }
+    case 'allmasksallvessels': {
+      const shuffled = shuffleArray(ALL_MASKS_ALL_VESSELS)
+      getCorrectOrderWithRestrictions(shuffled, [
+        MASK_SHARD_RESTRICTIONS,
+        WORLD_SOUL_RESTRICTIONS,
+      ])
+      let maskShardIndex = 0
+      let veselFragIndex = 0
+      const maskIndexes = shuffled.reduce((acc, split) => {
+        if (split.substring(0, 9) === 'MaskShard') {
+          acc[split] = maskShardIndex % 4
+          maskShardIndex++
+        } else {
+          acc[split] = veselFragIndex % 3
+          veselFragIndex++
+        }
         return acc
       }, {} as Record<string, number>)
       return processSplits(shuffled, maskIndexes)

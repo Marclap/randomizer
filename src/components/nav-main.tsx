@@ -42,7 +42,7 @@ export function NavMain({
                     {item.title[0]}
                   </AvatarFallback>
                 </Avatar>
-                <span className="uppercase font-extrabold text-sm">
+                <span className="uppercase font-extrabold text-xs">
                   {item.title}
                 </span>
               </Link>
