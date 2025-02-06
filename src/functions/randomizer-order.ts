@@ -65,13 +65,13 @@ const getCorrectOrderWithRestrictions = (
   restrictions: string[][]
 ) => {
   restrictions.forEach((restriction) => {
-    const restrictionsPositions = restriction
+    const restrictionPosition = restriction
       .map((res) => shuffled.indexOf(res))
       .filter((pos) => pos !== -1)
-    restrictionsPositions.sort((a, b) => a - b)
+    restrictionPosition.sort((a, b) => a - b)
     restriction.forEach((res, index) => {
       const currentPos = shuffled.indexOf(res)
-      const targetPos = restrictionsPositions[index]
+      const targetPos = restrictionPosition[index]
       if (currentPos !== targetPos) swap(shuffled, currentPos, targetPos)
     })
   })
@@ -114,13 +114,8 @@ export const getRandomizerSplits = (category: string) => {
       let maskShardIndex = 0
       let veselFragIndex = 0
       const maskIndexes = shuffled.reduce((acc, split) => {
-        if (split.substring(0, 9) === 'MaskShard') {
-          acc[split] = maskShardIndex % 4
-          maskShardIndex++
-        } else {
-          acc[split] = veselFragIndex % 3
-          veselFragIndex++
-        }
+        if (split.startsWith('MaskShard')) acc[split] = maskShardIndex++ % 4
+        else acc[split] = veselFragIndex++ % 3
         return acc
       }, {} as Record<string, number>)
       return processSplits(shuffled, maskIndexes)

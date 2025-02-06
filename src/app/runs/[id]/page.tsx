@@ -29,7 +29,7 @@ export default function Runs() {
 
   return (
     <div className="w-full h-full flex flex-col items-center transition-all duration-300">
-      <h3 className="text-2xl text-center font-semibold w-full uppercase my-8">
+      <h3 className="text-2xl text-center font-extrabold w-full uppercase my-8">
         {TITLES[id as string]}
       </h3>
       <div className="flex gap-4 mb-8">
