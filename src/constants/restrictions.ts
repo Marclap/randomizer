@@ -6,3 +6,16 @@ export const MASK_SHARD_RESTRICTIONS = [
   'MaskShardSly3',
   'MaskShardSly4',
 ]
+
+export const CHARM_NOTCH_RESTRICTIONS = [
+  'NotchSalubra1',
+  'NotchSalubra2',
+  'NotchSalubra3',
+  'NotchSalubra4',
+]
+
+export const GRIMMCHILD_RESTRICTIONS = [
+  'Grimmchild',
+  'Grimmchild2',
+  'NotchGrimm',
+]
