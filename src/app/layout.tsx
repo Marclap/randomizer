@@ -30,11 +30,11 @@ export default function RootLayout({
             <AppSidebar />
             <SidebarInset>
               <Header />
-              <div className="min-h-[calc(100vh-6.5rem)] flex flex-1 flex-col gap-4 p-7 font-sans">
+              <div className="min-h-[calc(100vh-10.5rem)] flex flex-1 flex-col gap-4 p-7 font-sans">
                 <div className="flex-1 rounded-xl bg-muted/50 md:min-h-min">
                   {children}
                 </div>
-                <div className="flex-1 rounded-xl bg-muted/50 max-h-[5%]">
+                <div className="flex-1 rounded-xl bg-muted/50 max-h-[4rem] min-h-[4rem]">
                   <div className="flex flex-wrap items-center justify-center max-w-[95%] h-full m-auto py-1">
                     <p>
                       Built by{' '}
