@@ -1,9 +1,12 @@
 import { PATHS } from '@/constants'
 import {
+  CHARM_NOTCH_RESTRICTIONS,
+  GRIMMCHILD_RESTRICTIONS,
   MASK_SHARD_RESTRICTIONS,
   WORLD_SOUL_RESTRICTIONS,
 } from '@/constants/restrictions'
 import {
+  ALL_CHARM_NOTCHES,
   ALL_MASK_SHARDS,
   ALL_MASKS_ALL_VESSELS,
   ALL_STAG_STATIONS,
@@ -119,6 +122,14 @@ export const getRandomizerSplits = (category: string) => {
         return acc
       }, {} as Record<string, number>)
       return processSplits(shuffled, maskIndexes)
+    }
+    case 'allcharmnotches': {
+      const shuffled = shuffleArray(ALL_CHARM_NOTCHES)
+      getCorrectOrderWithRestrictions(shuffled, [
+        CHARM_NOTCH_RESTRICTIONS,
+        GRIMMCHILD_RESTRICTIONS,
+      ])
+      return processSplits(shuffled)
     }
     default:
       return []

@@ -5,17 +5,23 @@ export const PATHS: PathConfig = {
       '/assets/hollowKnight/icons/achievements/AllMaskAllVessels.png',
     allStags: '/assets/hollowKnight/icons/achievements/AllStagStations.png',
     allVessels: '/assets/hollowKnight/icons/achievements/AllVessels.png',
+    charmNotch: '/assets/hollowKnight/icons/items/CharmNotch.png',
+    charmNotchGrimm: '/assets/hollowKnight/icons/items/CharmNotchGrimm.png',
+    colosseumBronze:
+      '/assets/hollowKnight/icons/achievements/ColosseumBronze.png',
     elegy: '/assets/hollowKnight/icons/charms/GrubberflysElegy.png',
+    grimmchild: '/assets/hollowKnight/icons/charms/Grimmchild.png',
+    grimmchild2: '/assets/hollowKnight/icons/charms/Grimmchild2.png',
     grub: '/assets/hollowKnight/icons/misc/Grub.png',
     home: '/assets/icon.png',
-    maskShard0: '/assets/hollowKnight/icons/fragment/MaskShard0.png',
-    maskShard1: '/assets/hollowKnight/icons/fragment/MaskShard1.png',
-    maskShard2: '/assets/hollowKnight/icons/fragment/MaskShard2.png',
-    maskShard3: '/assets/hollowKnight/icons/fragment/MaskShard3.png',
+    maskShard0: '/assets/hollowKnight/icons/fragments/MaskShard0.png',
+    maskShard1: '/assets/hollowKnight/icons/fragments/MaskShard1.png',
+    maskShard2: '/assets/hollowKnight/icons/fragments/MaskShard2.png',
+    maskShard3: '/assets/hollowKnight/icons/fragments/MaskShard3.png',
     stag: '/assets/hollowKnight/icons/misc/Stag.png',
-    vesselFrag0: '/assets/hollowKnight/icons/fragment/VesselFrag0.png',
-    vesselFrag1: '/assets/hollowKnight/icons/fragment/VesselFrag1.png',
-    vesselFrag2: '/assets/hollowKnight/icons/fragment/VesselFrag2.png',
+    vesselFrag0: '/assets/hollowKnight/icons/fragments/VesselFrag0.png',
+    vesselFrag1: '/assets/hollowKnight/icons/fragments/VesselFrag1.png',
+    vesselFrag2: '/assets/hollowKnight/icons/fragments/VesselFrag2.png',
   },
   logos: {
     home: '/assets/hollowKnight/logos/home.png',
@@ -32,6 +38,11 @@ export const SIDEBAR = [
     title: '16 Mask Shards',
     url: '/runs/allmaskshards',
     icon: PATHS.icons.allMasks,
+  },
+  {
+    title: 'All Charm Notches',
+    url: '/runs/allcharmnotches',
+    icon: PATHS.icons.charmNotch,
   },
   {
     title: 'All Masks All Vessels',
@@ -62,6 +73,7 @@ export const TITLES: { [key: string]: string } = {
   allstagstations: 'All Stag Stations',
   allmaskshards: '16 Mask Shards',
   allmasksallvessels: 'All Masks All Vessels',
+  allcharmnotches: 'All Charm Notches',
 }
 
 export const CONFIG_RUN: SplitConfig = {
@@ -89,6 +101,11 @@ export const CONFIG_RUN: SplitConfig = {
     gameName: 'Hollow Knight Category Extensions',
     endTriggeringAutosplit: 'True',
     category: 'All Masks All Vessels Random Fragment And Shard Order',
+  },
+  allcharmnotches: {
+    gameName: 'Hollow Knight Category Extensions',
+    endTriggeringAutosplit: 'True',
+    category: 'All Charm Notches Random Notch Order',
   },
 }
 

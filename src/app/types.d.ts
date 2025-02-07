@@ -17,12 +17,5 @@ interface PathConfig {
 }
 
 interface CombinatorialComplexityConfig {
-  [key: string]: {
-    title: string
-    description: string
-    formula: string
-    specialNote?: string | React.ReactElement
-    result: string | React.ReactElement
-    additionalInfo?: string | React.ReactElement
-  }
+  [key: string]: React.ReactElement
 }
