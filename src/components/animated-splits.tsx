@@ -16,7 +16,7 @@ export default function AnimatedSplits({ splits }: { splits: SplitInfo[] }) {
           }}
         >
           <div className="text-sm transition-colors p-1 rounded">
-            <div className="flex flex-row items-center font-mono font-bold text-base">
+            <div className="flex flex-row items-center font-mono font-bold text-lg">
               <Avatar className="w-10 h-10 mx-4 rounded-none">
                 <AvatarImage
                   src={split.img}

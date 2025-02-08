@@ -5,6 +5,7 @@ export const PATHS: PathConfig = {
       '/assets/hollowKnight/icons/achievements/AllMaskAllVessels.png',
     allStags: '/assets/hollowKnight/icons/achievements/AllStagStations.png',
     allVessels: '/assets/hollowKnight/icons/achievements/AllVessels.png',
+    whisperingRoots: '/assets/hollowKnight/icons/misc/WhisperingRoot.png',
     charmNotch: '/assets/hollowKnight/icons/items/CharmNotch.png',
     charmNotchGrimm: '/assets/hollowKnight/icons/items/CharmNotchGrimm.png',
     colosseumBronze:
@@ -55,6 +56,11 @@ export const SIDEBAR = [
     icon: PATHS.icons.allStags,
   },
   {
+    title: 'All Whispering Roots',
+    url: '/runs/allwhisperingroots',
+    icon: PATHS.icons.whisperingRoots,
+  },
+  {
     title: 'Elegy%',
     url: '/runs/elegy',
     icon: PATHS.icons.elegy,
@@ -74,6 +80,7 @@ export const TITLES: { [key: string]: string } = {
   allmaskshards: '16 Mask Shards',
   allmasksallvessels: 'All Masks All Vessels',
   allcharmnotches: 'All Charm Notches',
+  allwhisperingroots: 'All Whispering Roots',
 }
 
 export const CONFIG_RUN: SplitConfig = {
@@ -106,6 +113,11 @@ export const CONFIG_RUN: SplitConfig = {
     gameName: 'Hollow Knight Category Extensions',
     endTriggeringAutosplit: 'True',
     category: 'All Charm Notches Random Notch Order',
+  },
+  allwhisperingroots: {
+    gameName: 'Hollow Knight Category Extensions',
+    endTriggeringAutosplit: 'True',
+    category: 'All Whispering Roots Random Roots Order',
   },
 }
 

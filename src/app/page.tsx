@@ -11,7 +11,15 @@ export default function Home() {
     <div className="flex flex-wrap items-center justify-center max-w-[95%] m-auto p-1">
       <div className="pt-3 min-w-[90%] mx-auto">
         <div className="min-w-[90%] mx-auto flex justify-center">
-          <Image width={1000} height={1000} src={PATHS.logos.home} alt="logo" />
+          <Image
+            width={1000}
+            height={1000}
+            src={PATHS.logos.home}
+            style={{
+              filter: 'drop-shadow(0 0 2px #000)',
+            }}
+            alt="logo"
+          />
         </div>
         <h2 className="text-3xl text-center font-semibold mb-4">
           Random split order generator for Hollow Knight speedruns

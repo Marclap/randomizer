@@ -356,4 +356,81 @@ export const SPLIT_DATA = [
     name: 'Trial of the Warrior',
     iconType: 'colosseumBronze',
   },
+
+  // Whispering Roots
+  {
+    key: 'TreeCity',
+    name: 'City of Tears Root',
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreeCliffs',
+    name: 'Howling Cliffs Root',
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreeCrossroads',
+    name: 'Forgotten Crossroads Root',
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreeDeepnest',
+    name: 'Deepnest Root',
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreeGlade',
+    name: "Spirit's Glade Root",
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreeGreenpath',
+    name: 'Greenpath Root',
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreeHive',
+    name: 'Hive Root',
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreeKingdomsEdge',
+    name: "Kingdom's Edge Root",
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreeLegEater',
+    name: 'Leg Eater Root',
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreeMantisVillage',
+    name: 'Mantis Village Root',
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreeMound',
+    name: 'Ancestral Mound Root',
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreePeak',
+    name: 'Crystal Peak Root',
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreeQueensGardens',
+    name: "Queen's Gardens Root",
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreeRestingGrounds',
+    name: 'Resting Grounds Root',
+    iconType: 'whisperingRoots',
+  },
+  {
+    key: 'TreeWaterways',
+    name: 'Royal Waterways Root',
+    iconType: 'whisperingRoots',
+  },
 ]
