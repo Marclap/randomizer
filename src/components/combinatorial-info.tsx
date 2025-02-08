@@ -167,7 +167,7 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
             number of possible unique permutations is given by:
           </p>
           <div className="flex items-center justify-center bg-secondary/60 p-4 rounded-md">
-            <code className="text-2xl font-mono text-white">
+            <code className="text-2xl font-mono">
               25! = 25 x 24 x 23 x ... x 2 x 1
             </code>
           </div>
@@ -251,7 +251,7 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
             </p>
           </div>
           <div className="flex items-center justify-center bg-secondary/60 p-4 rounded-md">
-            <code className="text-2xl font-mono text-white">
+            <code className="text-2xl font-mono">
               25! / (2 x 4!) = ~3.23 x 10<sup className="text-sm">23</sup>
             </code>
           </div>
