@@ -360,6 +360,30 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
         </div>
       </>
     ),
+    allwhisperingroots: (
+      <>
+        <h3 className="text-2xl font-bold text-center mb-7">
+          Combinatorial Complexity of All Whispering Roots
+        </h3>
+        <div className="space-y-4">
+          <p className="text-lg">
+            When randomizing the order of obtain all Whispering Roots, the
+            number of possible unique permutations is given by:
+          </p>
+          <div className="flex items-center justify-center bg-secondary/60 p-4 rounded-md">
+            <code className="text-2xl font-mono">
+              15! = 15 x 14 x 13 x ... x 2 x 1
+            </code>
+          </div>
+          <p className="text-lg">
+            The total number of possible permutations is:
+          </p>
+          <div className="flex items-center justify-center bg-secondary/60 p-4 rounded-md">
+            <code className="text-2xl font-mono">15! = 1,307,674,368,000</code>
+          </div>
+        </div>
+      </>
+    ),
   }
 
   const data = RUN_DATA[run]

@@ -128,3 +128,21 @@ export const ALL_CHARM_NOTCHES = [
   'NotchSalubra4',
   'NotchShrumalOgres',
 ]
+
+export const ALL_WHISPERING_ROOTS = [
+  'TreeCity',
+  'TreeCliffs',
+  'TreeCrossroads',
+  'TreeDeepnest',
+  'TreeGlade',
+  'TreeGreenpath',
+  'TreeHive',
+  'TreeKingdomsEdge',
+  'TreeLegEater',
+  'TreeMantisVillage',
+  'TreeMound',
+  'TreePeak',
+  'TreeQueensGardens',
+  'TreeRestingGrounds',
+  'TreeWaterways',
+]

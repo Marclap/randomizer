@@ -10,6 +10,7 @@ import {
   ALL_MASK_SHARDS,
   ALL_MASKS_ALL_VESSELS,
   ALL_STAG_STATIONS,
+  ALL_WHISPERING_ROOTS,
   ELEGY,
   WORLDSOUL,
 } from '@/constants/runs'
@@ -129,6 +130,10 @@ export const getRandomizerSplits = (category: string) => {
         CHARM_NOTCH_RESTRICTIONS,
         GRIMMCHILD_RESTRICTIONS,
       ])
+      return processSplits(shuffled)
+    }
+    case 'allwhisperingroots': {
+      const shuffled = shuffleArray(ALL_WHISPERING_ROOTS)
       return processSplits(shuffled)
     }
     default:
