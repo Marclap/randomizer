@@ -1,5 +1,6 @@
 'use client'
 
+import { ModeToggle } from '@/components/mode-toggle'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -7,9 +8,8 @@ import {
 } from '@/components/ui/breadcrumb'
 import { Separator } from '@/components/ui/separator'
 import { SidebarTrigger } from '@/components/ui/sidebar'
-import { TITLES } from '@/constants'
+import { TITLES } from '@/constants/titles'
 import { usePathname } from 'next/navigation'
-import { ModeToggle } from '@/components/mode-toggle'
 
 const Header = () => {
   const params = usePathname()

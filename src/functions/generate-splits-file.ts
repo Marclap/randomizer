@@ -1,4 +1,4 @@
-import { CONFIG_RUN, LIVE_SPLIT_CONFIG } from '@/constants'
+import { CONFIG_RUN, LIVE_SPLIT_CONFIG } from '@/constants/configFile'
 
 const uint8ToBase64 = (bytes: Uint8Array): string =>
   btoa(String.fromCharCode(...bytes))

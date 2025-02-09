@@ -12,10 +12,8 @@ interface SplitConfig {
   }
 }
 
-interface PathConfig {
-  [key: string]: { [key: string]: string }
-}
-
-interface CombinatorialComplexityConfig {
-  [key: string]: React.ReactElement
+interface SidebarItem {
+  title: string
+  url: string
+  icon: string
 }

@@ -4,7 +4,7 @@ import * as React from 'react'
 
 import { NavMain } from '@/components/nav-main'
 import { Sidebar, SidebarContent, SidebarRail } from '@/components/ui/sidebar'
-import { SIDEBAR } from '@/constants'
+import { SIDEBAR } from '@/constants/sidebar'
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
