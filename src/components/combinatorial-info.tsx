@@ -396,6 +396,32 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
         </div>
       </>
     ),
+    allgreatknights: (
+      <>
+        <h3 className="text-2xl font-bold text-center mb-7">
+          Combinatorial Complexity of All Great Knights
+        </h3>
+        <div className="space-y-4">
+          <p className="text-lg">
+            When randomizing the order of{' '}
+            <span className="font-black">All Great Knights</span>, the number of
+            possible unique permutations in which we can complete the questlines
+            of for all five knights is given by:
+          </p>
+          <div className="flex items-center justify-center bg-secondary p-4 rounded-md">
+            <code className="text-2xl font-mono font-black">
+              5! = 5 x 4 x 3 x 2 x 1
+            </code>
+          </div>
+          <p className="text-lg">
+            The total number of possible permutations is:
+          </p>
+          <div className="flex items-center justify-center space-x-2 bg-secondary p-4 rounded-md shadow-sm">
+            <code className="text-2xl font-mono font-black">5! = 120</code>
+          </div>
+        </div>
+      </>
+    ),
   }
 
   const data = RUN_DATA[run]

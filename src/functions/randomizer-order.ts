@@ -8,6 +8,7 @@ import {
 } from '@/constants/restrictions'
 import {
   ALL_CHARM_NOTCHES,
+  ALL_GREAT_KNIGHTS,
   ALL_MASK_SHARDS,
   ALL_MASKS_ALL_VESSELS,
   ALL_STAG_STATIONS,
@@ -141,6 +142,10 @@ export const getRandomizerSplits = (category: string) => {
     case 'lordofthekeys': {
       const shuffled = shuffleArray(LORD_OF_THE_KEYS)
       getCorrectOrderWithRestrictions(shuffled, [LORD_OF_THE_KEYS_RESTRICTIONS])
+      return processSplits(shuffled)
+    }
+    case 'allgreatknights': {
+      const shuffled = shuffleArray(ALL_GREAT_KNIGHTS)
       return processSplits(shuffled)
     }
     default:

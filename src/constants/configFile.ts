@@ -36,6 +36,10 @@ export const CONFIG_RUN: SplitConfig = {
     ...DEFAULT_RUN_CONFIG,
     category: 'Lord Of The Keys Random Keys Order',
   },
+  allgreatknights: {
+    ...DEFAULT_RUN_CONFIG,
+    category: 'All Great Knights Random Great Knight Order',
+  },
 }
 
 export const LIVE_SPLIT_CONFIG = {
