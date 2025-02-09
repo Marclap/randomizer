@@ -8,4 +8,5 @@ export const TITLES: { [key: string]: string } = {
   allcharmnotches: 'All Charm Notches',
   allwhisperingroots: 'All Whispering Roots',
   lordofthekeys: 'Lord Of The Keys',
+  allgreatknights: 'All Great Knights',
 }

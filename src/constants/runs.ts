@@ -156,3 +156,11 @@ export const LORD_OF_THE_KEYS = [
   'SlySimpleKey',
   'StoreroomsKey',
 ]
+
+export const ALL_GREAT_KNIGHTS = [
+  'CityGateOpen',
+  'DungDefender',
+  'FlowerQuest',
+  'IsmasTear',
+  'WhiteFragmentLeft',
+]

@@ -169,6 +169,11 @@ export const SPLIT_DATA = [
   { key: 'Grimmchild', name: 'Grimmchild', iconType: 'grimmchild' },
   { key: 'Grimmchild2', name: 'Grimmchild Lvl 2', iconType: 'grimmchild2' },
   { key: 'GrubberflysElegy', name: "Grubberfly's Elegy", iconType: 'elegy' },
+  {
+    key: 'WhiteFragmentLeft',
+    name: 'Queen Fragment',
+    iconType: 'whitheFrgamentLeft',
+  },
 
   // Vessel Fragments
   {
@@ -441,6 +446,11 @@ export const SPLIT_DATA = [
     iconType: 'simpleKey',
     split: 'OnObtainMaskShard',
   },
+  {
+    key: 'CityKey',
+    name: 'City Crest',
+    iconType: 'cityKey',
+  },
   { key: 'ElegantKey', name: 'Elegant Key', iconType: 'elegantKey' },
   { key: 'LoveKey', name: 'Love Key', iconType: 'loveKey' },
   {
@@ -461,5 +471,28 @@ export const SPLIT_DATA = [
     name: 'Storerooms Key',
     iconType: 'simpleKey',
     split: 'OnObtainMaskShard',
+  },
+  // Events
+  {
+    key: 'CityGateOpen',
+    name: 'City Gate',
+    iconType: 'cityGateOpen',
+  },
+  {
+    key: 'FlowerQuest',
+    name: 'Flower Quest',
+    iconType: 'delicateFlower',
+  },
+  // Bosses
+  {
+    key: 'DungDefender',
+    name: 'Dung Defender',
+    iconType: 'dungDefender',
+  },
+  // Skills
+  {
+    key: 'IsmasTear',
+    name: "Isma's Tear",
+    iconType: 'ismasTear',
   },
 ]

@@ -46,6 +46,11 @@ export const SIDEBAR: SidebarItem[] = [
     url: '/runs/lordofthekeys',
     icon: ICONS.simpleKey,
   },
+  {
+    title: 'All Great Knights',
+    url: '/runs/allgreatknights',
+    icon: ICONS.allGreatKnights,
+  },
 ].sort((a, b) => {
   if (a.title === 'Home') return -1
   if (b.title === 'Home') return 1
