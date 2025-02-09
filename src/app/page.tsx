@@ -1,9 +1,10 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
-import { PATHS, SIDEBAR } from '@/constants'
-import Link from 'next/link'
+import { LOGOS } from '@/constants/paths'
+import { SIDEBAR } from '@/constants/sidebar'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   const itemsWithIcons = SIDEBAR.filter((item) => item.title !== 'Home')
@@ -14,7 +15,7 @@ export default function Home() {
           <Image
             width={1000}
             height={1000}
-            src={PATHS.logos.home}
+            src={LOGOS.home}
             style={{
               filter: 'drop-shadow(0 0 2px #000)',
             }}

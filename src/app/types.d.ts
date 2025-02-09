@@ -11,11 +11,3 @@ interface SplitConfig {
     category: string
   }
 }
-
-interface PathConfig {
-  [key: string]: { [key: string]: string }
-}
-
-interface CombinatorialComplexityConfig {
-  [key: string]: React.ReactElement
-}

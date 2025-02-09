@@ -4,7 +4,7 @@ import AnimatedSplits from '@/components/animated-splits'
 import CombinatorialInfo from '@/components/combinatorial-info'
 import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
-import { TITLES } from '@/constants'
+import { TITLES } from '@/constants/titles'
 import { generateSplitsFile } from '@/functions/generate-splits-file'
 import { getRandomizerSplits } from '@/functions/randomizer-order'
 import { useParams } from 'next/navigation'
@@ -40,23 +40,23 @@ export default function Runs() {
           <Button onClick={handleDownload}>Download</Button>
         )}
       </div>
-      <ScrollArea className="h-auto max-h-[69vh] w-full max-w-2xl rounded-md border bg-background/90 backdrop-blur-sm">
-        <div className="p-4 space-y-2">
-          {isGenerated ? (
-            <>
-              {splits.length > 0 ? (
-                <AnimatedSplits splits={splits} />
-              ) : (
-                <div className="text-muted-foreground text-center text-red-600 py-8">
-                  No splits generated
-                </div>
-              )}
-            </>
-          ) : (
-            <CombinatorialInfo run={id as string} />
-          )}
-        </div>
-      </ScrollArea>
+      {isGenerated ? (
+        <ScrollArea className="h-auto max-h-[59vh] w-full max-w-2xl rounded-md border bg-background/90 backdrop-blur-sm">
+          <div className="p-4 space-y-2">
+            {splits.length > 0 ? (
+              <AnimatedSplits splits={splits} />
+            ) : (
+              <div className="text-muted-foreground text-center text-red-600 py-8">
+                No splits generated
+              </div>
+            )}
+          </div>
+        </ScrollArea>
+      ) : (
+        <ScrollArea className="h-auto max-h-[59vh] w-full max-w-3xl rounded-md border bg-background/90 backdrop-blur-sm">
+          <CombinatorialInfo run={id as string} />
+        </ScrollArea>
+      )}
     </div>
   )
 }

@@ -1,7 +1,7 @@
 'use client'
 
 const CombinatorialInfo = ({ run }: { run: string }) => {
-  const RUN_DATA: CombinatorialComplexityConfig = {
+  const RUN_DATA: { [key: string]: React.ReactElement } = {
     elegy: (
       <>
         <h3 className="text-2xl font-bold text-center mb-7">
@@ -437,7 +437,7 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
     )
   }
 
-  return <div className="p-7">{data}</div>
+  return <div className="p-11 text-lg">{data}</div>
 }
 
 export default CombinatorialInfo

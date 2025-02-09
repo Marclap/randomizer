@@ -1,4 +1,4 @@
-import { PATHS } from '@/constants'
+import { ICONS } from '@/constants/paths'
 import {
   CHARM_NOTCH_RESTRICTIONS,
   GRIMMCHILD_RESTRICTIONS,
@@ -42,10 +42,10 @@ const generateSplitInfo = (
   return splits.reduce((acc, { key, name, iconType, split }) => {
     const imgPath =
       typeof iconType === 'string'
-        ? PATHS.icons[iconType]
+        ? ICONS[iconType]
         : extraParams && key in extraParams
-        ? PATHS.icons[`${iconType.type}${extraParams[key]}`]
-        : PATHS.icons[iconType.type]
+        ? ICONS[`${iconType.type}${extraParams[key]}`]
+        : ICONS[iconType.type]
 
     acc[key] = {
       name,
