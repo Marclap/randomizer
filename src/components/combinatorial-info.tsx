@@ -9,8 +9,9 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
         </h3>
         <div className="space-y-4">
           <p className="text-lg">
-            When randomizing the order of Elegy%, the number of possible unique
-            permutations in which we can rescue the grubs is given by:
+            When randomizing the order of{' '}
+            <span className="font-black">Elegy%</span>, the number of possible
+            unique permutations in which we can rescue the grubs is given by:
           </p>
           <div className="flex items-center justify-center bg-secondary p-4 rounded-md">
             <code className="text-2xl font-mono font-black">
@@ -43,8 +44,10 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
         </h3>
         <div className="space-y-4">
           <p className="text-lg">
-            When randomizing the order of Worldsoul, the number of possible
-            unique permutations in which we can obtain fragments is given by:
+            When randomizing the order of{' '}
+            <span className="font-black">Worldsoul</span>, the number of
+            possible unique permutations in which we can obtain fragments is
+            given by:
           </p>
           <div className="flex items-center justify-center bg-secondary p-4 rounded-md">
             <code className="text-2xl font-mono font-black">
@@ -83,8 +86,9 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
         </h3>
         <div className="space-y-4">
           <p className="text-lg">
-            When randomizing the order of obtain all Stag Stations, the number
-            of possible unique permutations is given by:
+            When randomizing the order of obtain{' '}
+            <span className="font-black">All Stag Stations</span>, the number of
+            possible unique permutations is given by:
           </p>
           <div className="flex items-center justify-center bg-secondary p-4 rounded-md">
             <code className="text-2xl font-mono font-black">
@@ -107,8 +111,9 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
         </h3>
         <div className="space-y-4">
           <p className="text-lg">
-            When randomizing the order of obtaining all 16 Mask Shards, the
-            number of possible unique permutations is given by:
+            When randomizing the order of obtaining{' '}
+            <span className="font-black">16 Mask Shards</span>, the number of
+            possible unique permutations is given by:
           </p>
           <div className="flex items-center justify-center bg-secondary p-4 rounded-md">
             <code className="text-2xl font-mono font-black">
@@ -157,7 +162,8 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
         </h3>
         <div className="space-y-4">
           <p className="text-lg">
-            When randomizing the order of obtaining All Masks All Vessels, the
+            When randomizing the order of obtaining{' '}
+            <span className="font-black">All Masks All Vessels</span>, the
             number of possible unique permutations is given by:
           </p>
           <div className="flex items-center justify-center bg-secondary p-4 rounded-md">
@@ -241,8 +247,9 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
         </h3>
         <div className="space-y-4">
           <p className="text-lg">
-            When randomizing the order of obtaining All Charm Notches, the
-            number of possible unique permutations is given by:
+            When randomizing the order of obtaining{' '}
+            <span className="font-black">All Charm Notches</span>, the number of
+            possible unique permutations is given by:
           </p>
           <div className="flex items-center justify-center bg-secondary p-4 rounded-md">
             <code className="text-2xl font-mono font-black">
@@ -328,8 +335,9 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
         </h3>
         <div className="space-y-4">
           <p className="text-lg">
-            When randomizing the order of obtain all Whispering Roots, the
-            number of possible unique permutations is given by:
+            When randomizing the order of obtain{' '}
+            <span className="font-black">All Whispering Roots</span>, the number
+            of possible unique permutations is given by:
           </p>
           <div className="flex items-center justify-center bg-secondary p-4 rounded-md">
             <code className="text-2xl font-mono font-black">
@@ -354,7 +362,8 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
         </h3>
         <div className="space-y-4">
           <p className="text-lg">
-            When randomizing the order of Lord Of The Keys, the number of
+            When randomizing the order of{' '}
+            <span className="font-black">Lord Of The Keys</span>, the number of
             possible unique permutations in which we can obtain keys is given
             by:
           </p>
