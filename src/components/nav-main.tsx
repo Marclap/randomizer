@@ -28,7 +28,9 @@ export function NavMain({
             <SidebarMenuButton
               asChild
               className={`h-full hover:bg-accent/100 ${
-                id === item.title ? 'bg-secondary-foreground/20' : ''
+                id === item.url.split('/').slice(-1).toString()
+                  ? 'bg-secondary-foreground/20'
+                  : ''
               }`}
             >
               <Link href={item.url} className="flex items-center gap-3">

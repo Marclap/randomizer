@@ -146,3 +146,13 @@ export const ALL_WHISPERING_ROOTS = [
   'TreeRestingGrounds',
   'TreeWaterways',
 ]
+
+export const LORD_OF_THE_KEYS = [
+  'BasinKey',
+  'ElegantKey',
+  'LoveKey',
+  'PaleLurkerKey',
+  'SlyKey',
+  'SlySimpleKey',
+  'StoreroomsKey',
+]

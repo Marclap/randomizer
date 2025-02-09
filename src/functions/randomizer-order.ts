@@ -2,6 +2,7 @@ import { PATHS } from '@/constants'
 import {
   CHARM_NOTCH_RESTRICTIONS,
   GRIMMCHILD_RESTRICTIONS,
+  LORD_OF_THE_KEYS_RESTRICTIONS,
   MASK_SHARD_RESTRICTIONS,
   WORLD_SOUL_RESTRICTIONS,
 } from '@/constants/restrictions'
@@ -12,6 +13,7 @@ import {
   ALL_STAG_STATIONS,
   ALL_WHISPERING_ROOTS,
   ELEGY,
+  LORD_OF_THE_KEYS,
   WORLDSOUL,
 } from '@/constants/runs'
 import { SPLIT_DATA } from '@/constants/splits'
@@ -134,6 +136,11 @@ export const getRandomizerSplits = (category: string) => {
     }
     case 'allwhisperingroots': {
       const shuffled = shuffleArray(ALL_WHISPERING_ROOTS)
+      return processSplits(shuffled)
+    }
+    case 'lordofthekeys': {
+      const shuffled = shuffleArray(LORD_OF_THE_KEYS)
+      getCorrectOrderWithRestrictions(shuffled, [LORD_OF_THE_KEYS_RESTRICTIONS])
       return processSplits(shuffled)
     }
     default:

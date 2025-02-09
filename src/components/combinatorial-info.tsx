@@ -384,6 +384,47 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
         </div>
       </>
     ),
+    lordofthekeys: (
+      <>
+        <h3 className="text-2xl font-bold text-center mb-7">
+          Combinatorial Complexity of Lord Of The Keys
+        </h3>
+        <div className="space-y-4">
+          <p className="text-lg">
+            When randomizing the order of Lord Of The Keys, the number of
+            possible unique permutations in which we can obtain keys is given
+            by:
+          </p>
+          <div className="flex items-center justify-center bg-secondary/60 p-4 rounded-md">
+            <code className="text-2xl font-mono">
+              7! = 7 x 6 x 5 x ... x 2 x 1
+            </code>
+          </div>
+          <p>
+            However, there is one restriction:{' '}
+            <span className="font-mono font-extrabold">
+              Shopkeeper&apos;s Key
+            </span>{' '}
+            must be obtained before{' '}
+            <span className="font-mono font-extrabold">Elegant Key</span>. This
+            condition reduces the total number of valid permutations.
+          </p>
+          <p className="text-lg">
+            Without restrictions, the total number of permutations would be:
+          </p>
+          <div className="flex items-center justify-center space-x-2 bg-secondary/60 p-4 rounded-md shadow-sm">
+            <code className="text-2xl font-mono">7! = 5,040</code>
+          </div>
+          <p className="text-lg">
+            With the restriction, only half of these permutations are valid,
+            therefore, the total number of valid permutations is:
+          </p>
+          <div className="flex items-center justify-center bg-secondary/60 p-4 rounded-md">
+            <code className="text-2xl font-mono">7! / 2 = 2,520</code>
+          </div>
+        </div>
+      </>
+    ),
   }
 
   const data = RUN_DATA[run]

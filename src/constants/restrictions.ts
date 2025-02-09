@@ -19,3 +19,5 @@ export const GRIMMCHILD_RESTRICTIONS = [
   'Grimmchild2',
   'NotchGrimm',
 ]
+
+export const LORD_OF_THE_KEYS_RESTRICTIONS = ['SlyKey', 'ElegantKey']
