@@ -433,4 +433,33 @@ export const SPLIT_DATA = [
     name: 'Royal Waterways Root',
     iconType: 'whisperingRoots',
   },
+
+  // keys
+  {
+    key: 'BasinKey',
+    name: 'Basin Key',
+    iconType: 'simpleKey',
+    split: 'OnObtainMaskShard',
+  },
+  { key: 'ElegantKey', name: 'Elegant Key', iconType: 'elegantKey' },
+  { key: 'LoveKey', name: 'Love Key', iconType: 'loveKey' },
+  {
+    key: 'PaleLurkerKey',
+    name: 'Pale Lurker Key',
+    iconType: 'simpleKey',
+    split: 'OnObtainMaskShard',
+  },
+  { key: 'SlyKey', name: "Shopkeeper's Key", iconType: 'slyKey' },
+  {
+    key: 'SlySimpleKey',
+    name: 'Sly Simple Key',
+    iconType: 'simpleKey',
+    split: 'OnObtainMaskShard',
+  },
+  {
+    key: 'StoreroomsKey',
+    name: 'Storerooms Key',
+    iconType: 'simpleKey',
+    split: 'OnObtainMaskShard',
+  },
 ]
