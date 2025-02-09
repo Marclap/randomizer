@@ -4,6 +4,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
 import type { Metadata } from 'next'
 import './globals.css'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: 'HK Random Split Order',
@@ -66,6 +67,7 @@ export default function RootLayout({
             </SidebarInset>
           </SidebarProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
