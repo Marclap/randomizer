@@ -6,11 +6,11 @@ const DEFAULT_RUN_CONFIG = {
 export const CONFIG_RUN: SplitConfig = {
   allmaskshards: {
     ...DEFAULT_RUN_CONFIG,
-    category: '16 Mask Shards Random Mask Shards Order',
+    category: '16 Mask Shards Random Mask Order',
   },
   allstagstations: {
     ...DEFAULT_RUN_CONFIG,
-    category: 'All Stag Stations Random Stag Order',
+    category: 'All Stag Stations RSO',
   },
   elegy: {
     ...DEFAULT_RUN_CONFIG,
@@ -22,7 +22,7 @@ export const CONFIG_RUN: SplitConfig = {
   },
   allmasksallvessels: {
     ...DEFAULT_RUN_CONFIG,
-    category: 'All Masks All Vessels Random Fragment And Shard Order',
+    category: 'All Masks All Vessels RMVO',
   },
   allcharmnotches: {
     ...DEFAULT_RUN_CONFIG,
@@ -30,7 +30,7 @@ export const CONFIG_RUN: SplitConfig = {
   },
   allwhisperingroots: {
     ...DEFAULT_RUN_CONFIG,
-    category: 'All Whispering Roots Random Roots Order',
+    category: 'All Whispering Roots RRO',
   },
   lordofthekeys: {
     ...DEFAULT_RUN_CONFIG,
@@ -38,7 +38,7 @@ export const CONFIG_RUN: SplitConfig = {
   },
   allgreatknights: {
     ...DEFAULT_RUN_CONFIG,
-    category: 'All Great Knights Random Great Knight Order',
+    category: 'All Great Knights RGKO',
   },
 }
 
