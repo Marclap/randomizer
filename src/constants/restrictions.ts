@@ -7,6 +7,8 @@ export const MASK_SHARD_RESTRICTIONS = [
   'MaskShardSly4',
 ]
 
+export const MASK_AND_VESSEL_RESTRICTIONS = ['VesselFragSeer', 'MaskShardSeer']
+
 export const CHARM_NOTCH_RESTRICTIONS = [
   'NotchSalubra1',
   'NotchSalubra2',
