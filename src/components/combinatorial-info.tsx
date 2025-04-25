@@ -172,7 +172,7 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
             </code>
           </div>
           <div className="text-lg">
-            However, there are some restrictions:{' '}
+            However, there are some restrictions:
             <ul className="list-disc list-inside">
               <li>
                 <span className="font-black">Sly Vessel Fragment 1</span> and{' '}
@@ -195,6 +195,15 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
                 </span>
                 .
               </li>
+              <li>
+                <span className="font-black">Seer Vessel Fragment</span>, and{' '}
+                <span className="font-black">Seer Vessel Fragment</span> must be
+                obtained in the exact order{' '}
+                <span className="font-black">
+                  Seer Vessel Fragment → Seer Vessel Fragment
+                </span>
+                .
+              </li>
             </ul>
             These restrictions reduce the total number of valid permutations.
           </div>
@@ -211,7 +220,7 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
             <p>
               However, due to the restrictions on the order of the Sly Vessel
               Fragments and Sly Mask Shards, only{' '}
-              <span className="font-black">1 out of every 48 permutations</span>{' '}
+              <span className="font-black">1 out of every 96 permutations</span>{' '}
               is valid. This is because:
             </p>
             <ul className="list-disc list-inside">
@@ -225,16 +234,21 @@ const CombinatorialInfo = ({ run }: { run: string }) => {
                 specific order, reducing the total by a factor of{' '}
                 <span className="font-black">4! = 24</span>.
               </li>
+              <li>
+                The 2 restricted Seer rewards can only be obtained in one
+                specific order, reducing the total by a factor of{' '}
+                <span className="font-black">2</span>.
+              </li>
             </ul>
             <p>
               Therefore, the total number of permutations is reduced by a
-              combined factor of <span className="font-black">2 x 4! = 48</span>
-              .
+              combined factor of{' '}
+              <span className="font-black">2 x 2 x 4! = 96</span>.
             </p>
           </div>
           <div className="flex items-center justify-center bg-secondary p-4 rounded-md">
             <code className="text-2xl font-mono font-black">
-              25! / (2 x 4!) = ~3.23 x 10<sup className="text-sm">23</sup>
+              25! / (2 x 2 x 4!) = ~1.61 x 10<sup className="text-sm">23</sup>
             </code>
           </div>
         </div>
