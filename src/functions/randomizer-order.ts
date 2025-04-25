@@ -3,6 +3,7 @@ import {
   CHARM_NOTCH_RESTRICTIONS,
   GRIMMCHILD_RESTRICTIONS,
   LORD_OF_THE_KEYS_RESTRICTIONS,
+  MASK_AND_VESSEL_RESTRICTIONS,
   MASK_SHARD_RESTRICTIONS,
   WORLD_SOUL_RESTRICTIONS,
 } from '@/constants/restrictions'
@@ -117,6 +118,7 @@ export const getRandomizerSplits = (category: string) => {
       getCorrectOrderWithRestrictions(shuffled, [
         MASK_SHARD_RESTRICTIONS,
         WORLD_SOUL_RESTRICTIONS,
+        MASK_AND_VESSEL_RESTRICTIONS,
       ])
       let maskShardIndex = 0
       let veselFragIndex = 0
