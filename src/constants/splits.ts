@@ -444,7 +444,7 @@ export const SPLIT_DATA = [
     key: 'BasinKey',
     name: 'Basin Key',
     iconType: 'simpleKey',
-    split: 'OnObtainMaskShard',
+    split: 'OnObtainSimpleKey',
   },
   {
     key: 'CityKey',
@@ -457,20 +457,20 @@ export const SPLIT_DATA = [
     key: 'PaleLurkerKey',
     name: 'Pale Lurker Key',
     iconType: 'simpleKey',
-    split: 'OnObtainMaskShard',
+    split: 'OnObtainSimpleKey',
   },
   { key: 'SlyKey', name: "Shopkeeper's Key", iconType: 'slyKey' },
   {
     key: 'SlySimpleKey',
     name: 'Sly Simple Key',
     iconType: 'simpleKey',
-    split: 'OnObtainMaskShard',
+    split: 'OnObtainSimpleKey',
   },
   {
     key: 'StoreroomsKey',
     name: 'Storerooms Key',
     iconType: 'simpleKey',
-    split: 'OnObtainMaskShard',
+    split: 'OnObtainSimpleKey',
   },
   // Events
   {
