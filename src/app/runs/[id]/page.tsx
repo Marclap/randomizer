@@ -1,7 +1,7 @@
 'use client'
 
 import AnimatedSplits from '@/components/animated-splits'
-import CombinatorialInfo from '@/components/combinatorial-info'
+import CombinatorialInfo from '@/components/combinatorial/combinatorial-info'
 import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { TITLES } from '@/constants/titles'

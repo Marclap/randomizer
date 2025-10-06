@@ -17,3 +17,19 @@ interface SidebarItem {
   url: string
   icon: string
 }
+
+interface Restriction {
+  description: string
+  factor: number
+  explanation: string
+}
+
+interface RunData {
+  title: string
+  description: string
+  totalItems: number
+  unrestrictedPermutations: string
+  restrictions?: Restriction[]
+  finalPermutations: string
+  notes?: string[]
+}

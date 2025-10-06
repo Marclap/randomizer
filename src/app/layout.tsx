@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: 'HK Random Split Order',
   description:
     'This page generates random orders for some categories of Hollow Knight speedrun, this is just for the purpose of changing the routine and making fun runs.',
+  verification: {
+    google: 'a6Xk-h5IWUOg5tL6iPSbrbixFh-9QnXG6A0Wt_iyWXY',
+  },
 }
 
 export default function RootLayout({
@@ -20,12 +23,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <meta
-          name="google-site-verification"
-          content="a6Xk-h5IWUOg5tL6iPSbrbixFh-9QnXG6A0Wt_iyWXY"
-        />
-      </head>
       <body>
         <ThemeProvider
           attribute="class"
@@ -48,6 +45,7 @@ export default function RootLayout({
                       <a
                         href="https://www.twitch.tv/marclap99"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="underline underline-offset-4"
                       >
                         Marclap
@@ -56,6 +54,7 @@ export default function RootLayout({
                       <a
                         href="https://github.com/Marclap/randomizer"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="underline underline-offset-4"
                       >
                         Github

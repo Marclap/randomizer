@@ -6,30 +6,31 @@ import { Separator } from '@/components/ui/separator'
 export default function AnimatedSplits({ splits }: { splits: SplitInfo[] }) {
   return (
     <>
-      {splits.map((split, index) => (
+      {splits.map((split) => (
         <div
-          key={`${split}-${index}`}
+          key={`${split.name}`}
           className="space-y-2 relative opacity-0"
           style={{
             animation: 'slide-and-fade-in 0.5s ease forwards',
-            animationDelay: `${index * 0.1}s`,
+            animationDelay: `${splits.indexOf(split) * 0.1}s`,
           }}
         >
           <div className="text-sm transition-colors p-1 rounded">
             <div className="flex flex-row items-center font-mono font-bold text-lg">
               <Avatar className="w-10 h-10 mx-4 rounded-none">
-                <AvatarImage
-                  src={split.img}
-                  alt={split.name}
-                  className="object-contain"
-                />
+                <AvatarImage src={split.img} className="object-contain" />
                 <AvatarFallback className="text-2xl bg-muted">
-                  {split.name}
+                  {split.name
+                    .split(' ')
+                    .map((w) => w[0])
+                    .join('')}
                 </AvatarFallback>
               </Avatar>
-              {split.name}
+              <span>{split.name}</span>
             </div>
-            {index < splits.length - 1 && <Separator className="mt-2" />}
+            {splits.indexOf(split) < splits.length - 1 && (
+              <Separator className="mt-2" />
+            )}
           </div>
         </div>
       ))}
